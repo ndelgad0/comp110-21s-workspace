@@ -16,17 +16,17 @@ from random import randint
 
 print("Your fortune cookie says...")
 
-fortune: int = randint(1,10)
+fortune: int = randint(1,100)
 
-if fortune < 5:
-    if fortune == 5:
+if fortune <= 50:
+    if fortune < 25:
         print("You will find peace with yourself.")
     else: 
         print("Someone close to you will do something unexpected soon.")
 else:
-    if fortune > 5:
+    if fortune > 75:
         print("Something good will come of your efforts.")
-    else: 
+    else:
         print("You will be pleasantly surprised by your growth.")
 
 print("Now, go spread positive vibes!")
