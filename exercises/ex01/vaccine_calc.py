@@ -21,21 +21,23 @@ from datetime import timedelta
 pop: int = int(input("Population: "))
 doses_already: int = int(input("Doses administered: "))
 doses_x_day: int = int(input("Doses per day: "))
-targ_perc: int = int(input("Target percent vaccinated: "))
+tp: int = int(input("Target percent vaccinated: "))
 
 ppl_prev_vacc: float = doses_already / 2
-num_ppl_targ_perc: float = pop * (targ_perc / 100)
+num_ppl_targ_perc: float = pop * (tp / 100)
 ppl_left_vacc_targ_perc: float = num_ppl_targ_perc - ppl_prev_vacc
 
 ppl_vacc_x_day: float = doses_x_day / 2
 days_till_targ_perc: float = ppl_left_vacc_targ_perc / ppl_vacc_x_day
 
-d_t_t_p: int = (round(days_till_targ_perc))
+dttp: int = (round(days_till_targ_perc))
 
 today: datetime = datetime.today()
-days_till_targ_reach: timedelta = timedelta(d_t_t_p)
+days_till_targ_reach: timedelta = timedelta(dttp)
 
-day_targ_reach: datetime = today + (days_till_targ_reach)
+dtr: datetime = today + (days_till_targ_reach)
 
-
-print("We will reach " + str(targ_perc) +  "% vaccination in " + str(d_t_t_p) + " days, which falls on " + day_targ_reach.strftime("%B %d, %Y") + ".")
+# targ_perc: tp
+# d_t_t_p: dttp
+# day_targ_reach: dtr
+print("We will reach " + str(tp) + "% vaccination in " + str(dttp) + " days, which falls on " + dtr.strftime("%B %d, %Y") + ".")
