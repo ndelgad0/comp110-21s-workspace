@@ -11,9 +11,8 @@ def main() -> None:
     print("Now, go spread positive vibes!")
 
 
-# TODO 1: Define your fortune_cookie function here.
-
 def fortune_cookie() -> str:
+    """Program that outputs one of four fortunes."""
     if fortune <= 50:
         if fortune < 25:
             return("You will find peace with yourself.")
